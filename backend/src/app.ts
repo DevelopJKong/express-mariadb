@@ -9,6 +9,7 @@ const app: Express = express();
 const logger: Handler = morgan('dev'); 
 
 app.use(cors());
+app.use(logger);
 const PORT = 5000;
 
 sequelize.sync().then(() => {
